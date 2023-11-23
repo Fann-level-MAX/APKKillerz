@@ -10,7 +10,7 @@ namespace art {
 
 // art::ArtMethod::CopyFrom(art::ArtMethod*, art::PointerSize)
 SYMBOL kArtMethod_CopyFrom_O = "_ZN3art9ArtMethod8CopyFromEPS0_NS_11PointerSizeE";
-#if defined(__LP64__)
+#if !defined(__LP64__)
 // art::ArtMethod::CopyFrom(art::ArtMethod*, unsigned long)
 SYMBOL kArtMethod_CopyFrom_N = "_ZN3art9ArtMethod8CopyFromEPS0_m";
 // art::ArtMethod::CopyFrom(art::ArtMethod const*, unsigned long)
@@ -40,7 +40,7 @@ SYMBOL kArt_artInterpreterToCompiledCodeBridge = "artInterpreterToCompiledCodeBr
 // art::ProfileSaver::ForceProcessProfiles()
 SYMBOL kArt_ProfileSaver_ForceProcessProfiles = "_ZN3art12ProfileSaver20ForceProcessProfilesEv";
 
-#if defined(__LP64__)
+#if !defined(__LP64__)
 // art::LinearAlloc::Alloc(art::Thread*, unsigned int)
 SYMBOL kArt_LinearAlloc_Alloc = "_ZN3art11LinearAlloc5AllocEPNS_6ThreadEm";
 #else
@@ -58,7 +58,7 @@ SYMBOL kArt_Object_Clone = "_ZN3art6mirror6Object5CloneEPNS_6ThreadE";
 // art::mirror::Object::Clone(art::Thread*, art::mirror::Class*)
 SYMBOL kArt_Object_CloneWithClass = "_ZN3art6mirror6Object5CloneEPNS_6ThreadEPNS0_5ClassE";
 
-#if defined(__LP64__)
+#if !defined(__LP64__)
 // art::mirror::Object::Clone(art::Thread*, unsigned long)
 SYMBOL kArt_Object_CloneWithSize = "_ZN3art6mirror6Object5CloneEPNS_6ThreadEm";
 #else

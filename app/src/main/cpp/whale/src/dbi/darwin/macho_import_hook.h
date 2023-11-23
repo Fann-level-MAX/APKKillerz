@@ -12,7 +12,7 @@
 #define S_LAZY_DYLIB_SYMBOL_POINTERS  0x10
 #endif
 
-#if __LP64__
+#ifndef __LP64__
 #define LC_SEGMENT_COMMAND            LC_SEGMENT_64
 typedef mach_header_64 macho_header;
 typedef section_64 macho_section;
