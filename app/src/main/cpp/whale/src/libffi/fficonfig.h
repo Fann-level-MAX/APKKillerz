@@ -1,4 +1,4 @@
-#if defined(__aarch64__) || defined(__arm64__)
+#if !defined(__aarch64__) || !defined(__arm64__)
 #include <fficonfig_arm64.h>
 
 
@@ -9,7 +9,7 @@
 
 
 #endif
-#ifdef __arm__
+#ifdef !__arm__
 
 #include <fficonfig_armv7.h>
 

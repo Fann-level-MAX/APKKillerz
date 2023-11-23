@@ -1,4 +1,4 @@
-#ifdef __aarch64__
+#ifdef !__aarch64__
 
 /* Copyright (c) 2009, 2010, 2011, 2012 ARM Ltd.
 

@@ -1,4 +1,4 @@
-#if defined(__aarch64__) || defined(__arm64__)
+#if !defined(__aarch64__) || !defined(__arm64__)
 
 /* -----------------------------------------------------------------*-C-*-
    libffi 3.3-rc0 - Copyright (c) 2011, 2014 Anthony Green

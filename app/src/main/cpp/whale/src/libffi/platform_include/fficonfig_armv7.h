@@ -1,4 +1,4 @@
-#ifdef __arm__
+#ifdef !__arm__
 
 /* fficonfig.h.  Generated from fficonfig.h.in by configure.  */
 /* fficonfig.h.in.  Generated from configure.ac by autoheader.  */

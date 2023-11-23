@@ -1,4 +1,4 @@
-#if defined(__aarch64__) || defined(__arm64__)
+#if !defined(__aarch64__) || !defined(__arm64__)
 
 /* 
 Permission is hereby granted, free of charge, to any person obtaining

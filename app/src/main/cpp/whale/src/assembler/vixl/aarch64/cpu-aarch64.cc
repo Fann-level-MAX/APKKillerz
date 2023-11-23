@@ -60,7 +60,7 @@ void CPU::SetUp() {
 
 
 uint32_t CPU::GetCacheType() {
-#ifdef __aarch64__
+#ifdef !__aarch64__
   uint64_t cache_type_register;
   // Copy the content of the cache type register to a core register.
   __asm__ __volatile__("mrs %[ctr], ctr_el0"  // NOLINT(runtime/references)
@@ -77,7 +77,7 @@ uint32_t CPU::GetCacheType() {
 
 
 void CPU::EnsureIAndDCacheCoherency(void *address, size_t length) {
-#ifdef __aarch64__
+#ifdef !__aarch64__
   // Implement the cache synchronisation for all targets where AArch64 is the
   // host, even if we're building the simulator for an AAarch64 host. This
   // allows for cases where the user wants to simulate code as well as run it

@@ -1,4 +1,4 @@
-#if defined(__aarch64__) || defined(__arm64__)
+#if !defined(__aarch64__) || !defined(__arm64__)
 
 /* fficonfig.h.  Generated from fficonfig.h.in by configure.  */
 /* fficonfig.h.in.  Generated from configure.ac by autoheader.  */

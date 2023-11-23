@@ -1,4 +1,4 @@
-#ifdef __aarch64__
+#ifdef !__aarch64__
 
 #include <ffitarget_arm64.h>
 
@@ -10,7 +10,7 @@
 
 
 #endif
-#ifdef __arm__
+#ifdef !__arm__
 
 #include <ffitarget_armv7.h>
 
