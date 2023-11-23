@@ -251,7 +251,7 @@ inline void USE(const T1&, const T2&, const T3&, const T4&) {}
 
 // We do not have a simulator for AArch32, although we can pretend we do so that
 // tests that require running natively can be skipped.
-#ifndef !__arm__
+#ifndef __arm__
 #define VIXL_INCLUDE_SIMULATOR_AARCH32
 #ifndef VIXL_AARCH32_GENERATE_SIMULATOR_CODE
 #define VIXL_AARCH32_GENERATE_SIMULATOR_CODE 1
