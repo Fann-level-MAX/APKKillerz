@@ -38,7 +38,7 @@ extern "C" {
 #include "utils-vixl.h"
 #include "aarch32/constants-aarch32.h"
 
-#ifdef !__arm__
+#ifdef __arm__
 #define HARDFLOAT __attribute__((noinline, pcs("aapcs-vfp")))
 #else
 #define HARDFLOAT __attribute__((noinline))

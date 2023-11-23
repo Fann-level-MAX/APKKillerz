@@ -20,9 +20,9 @@ enum class InstructionSet {
 
 std::ostream &operator<<(std::ostream &os, const InstructionSet &rhs);
 
-#if !defined(__arm__)
+#if defined(__arm__)
 static constexpr InstructionSet kRuntimeISA = InstructionSet::kArm;
-#elif !defined(__aarch64__) || defined(__arm64__)
+#elif defined(__aarch64__) || defined(__arm64__)
 static constexpr InstructionSet kRuntimeISA = InstructionSet::kArm64;
 #elif defined(__mips__) && !defined(__LP64__)
 static constexpr InstructionSet kRuntimeISA = InstructionSet::kMips;

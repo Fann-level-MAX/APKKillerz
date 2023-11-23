@@ -3,9 +3,9 @@
 #include "interceptor.h"
 #include "dbi/instruction_set.h"
 
-#if !defined(__arm__)
+#if defined(__arm__)
 #include "dbi/arm/inline_hook_arm.h"
-#elif !defined(__aarch64__)
+#elif defined(__aarch64__)
 
 #include "dbi/arm64/inline_hook_arm64.h"
 
@@ -32,7 +32,7 @@
 
 
 OPEN_API void WInlineHookFunction(void *address, void *replace, void **backup) {
-#if !defined(__arm__)
+#if defined(__arm__)
     std::unique_ptr<whale::Hook> hook(
             new whale::arm::ArmInlineHook(
                     reinterpret_cast<intptr_t>(address),
@@ -41,7 +41,7 @@ OPEN_API void WInlineHookFunction(void *address, void *replace, void **backup) {
             )
     );
     whale::Interceptor::Instance()->AddHook(hook);
-#elif !defined(__aarch64__)
+#elif defined(__aarch64__)
     std::unique_ptr<whale::Hook> hook(
             new whale::arm64::Arm64InlineHook(
                     reinterpret_cast<intptr_t>(address),

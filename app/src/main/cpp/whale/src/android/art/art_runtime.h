@@ -13,7 +13,7 @@
 #include "base/macros.h"
 #include "base/primitive_types.h"
 
-#if !defined(__LP64__)
+#if defined(__LP64__)
 static constexpr const char *kAndroidLibDir = "/system/lib64/";
 static constexpr const char *kLibNativeBridgePath = "/system/lib64/libnativebridge.so";
 static constexpr const char *kLibArtPath = "/system/lib64/libart.so";

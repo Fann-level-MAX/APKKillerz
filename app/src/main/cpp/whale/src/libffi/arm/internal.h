@@ -1,4 +1,4 @@
-#ifndef __arm__
+#ifdef __arm__
 
 #define ARM_TYPE_VFP_S	0
 #define ARM_TYPE_VFP_D	1

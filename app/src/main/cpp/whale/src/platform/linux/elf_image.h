@@ -13,7 +13,7 @@
 #include "base/primitive_types.h"
 #include "base/logging.h"
 
-#if !defined(__LP64__)
+#if defined(__LP64__)
 #define Elf_Ehdr Elf64_Ehdr
 #define Elf_Shdr Elf64_Shdr
 #define Elf_Phdr Elf64_Phdr
