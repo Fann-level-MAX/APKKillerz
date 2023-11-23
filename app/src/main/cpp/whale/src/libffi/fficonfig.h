@@ -9,7 +9,7 @@
 
 
 #endif
-#ifdef !__arm__
+#ifndef __arm__
 
 #include <fficonfig_armv7.h>
 

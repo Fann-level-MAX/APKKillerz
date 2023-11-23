@@ -204,7 +204,7 @@ ffi_trampoline_table_alloc (void)
   /* Remap the trampoline table on top of the placeholder page */
   trampoline_page = config_page + PAGE_MAX_SIZE;
   trampoline_page_template = (vm_address_t)&ffi_closure_trampoline_table_page;
-#ifdef !__arm__
+#ifndef __arm__
   /* ffi_closure_trampoline_table_page can be thumb-biased on some ARM archs */
   trampoline_page_template &= ~1UL;
 #endif

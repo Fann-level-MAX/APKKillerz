@@ -1,4 +1,4 @@
-#ifdef !__arm__
+#ifndef __arm__
 
 /* -----------------------------------------------------------------*-C-*-
    ffitarget.h - Copyright (c) 2012  Anthony Green
