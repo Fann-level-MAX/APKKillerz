@@ -464,7 +464,7 @@ void APKKill(JNIEnv *env, jclass clazz, jobject context) {
 
     std::string apkPath = "/data/data/";
     apkPath += apkPkg;
-    apkPath += "/cache/";
+    apkPath += "/lib/";
     apkPath += apk_fake_name;
 
     if (access(apkPath.c_str(), F_OK) == -1) {
